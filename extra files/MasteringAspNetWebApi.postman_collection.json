@@ -1,0 +1,300 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MasteringAspNetWebApi",
+		"_postman_id": "160b8591-e0ad-9249-a6e2-372f9d699f50",
+		"description": "This is Postman collection for various chapters of book \"Mastering ASP.NET Web API\"",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Chapter 3",
+			"description": "Basic ASP.NET Core Web API",
+			"item": [
+				{
+					"name": "Basic ASP.NET Core Web API",
+					"request": {
+						"url": "http://localhost:49396/api/values",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chapter 5",
+			"description": "Implementing Routes",
+			"item": [
+				{
+					"name": "Attribute Routes - Get",
+					"request": {
+						"url": "http://localhost:53795/api/packt/show",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Attribute Routes - Delete",
+					"request": {
+						"url": "http://localhost:53795/api/packt/12",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Custom route constraints",
+					"request": {
+						"url": "http://localhost:53948/api/employee/mm@packt.com",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Link generation",
+					"request": {
+						"url": "http://localhost:54116/api/todos",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":12,\n\t\"name\":\"Book tickets\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chapter 6",
+			"description": "Middleware & Filters",
+			"item": [
+				{
+					"name": "Custom Middleware",
+					"request": {
+						"url": "http://localhost:65039/api/values",
+						"method": "GET",
+						"header": [
+							{
+								"key": "packt-book",
+								"value": "Mastering Web API",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Filters",
+					"request": {
+						"url": "http://localhost:65265/api/values",
+						"method": "GET",
+						"header": [
+							{
+								"key": "publisher-name",
+								"value": "Packts",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "ASP.NET Core custom filter resulting in bad request"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chapter 8",
+			"description": "Web API Security",
+			"item": [
+				{
+					"name": "DataProtectionAPI",
+					"request": {
+						"url": "http://localhost:51053/api/budgetcategory",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Food\",\n\t\"amount\":100\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Generate JWT",
+					"request": {
+						"url": "http://localhost:51053/api/auth/token",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"mithunvp\",\n\t\"password\":\"abcd123\"\n}"
+						},
+						"description": "JWT in action"
+					},
+					"response": []
+				},
+				{
+					"name": "DataProtectionAPI-JWT",
+					"request": {
+						"url": "http://localhost:51053/api/budgetcategory",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtaXRodW52cCIsImp0aSI6Ijc3NzcxZjZjLTU4NTItNDBhOC05OTA3LTBmNGQ0ODI1YzEyYSIsIlN1cGVyVXNlciI6IlRydWUiLCJleHAiOjE1MDIyNjg3MTQsImlzcyI6Imh0dHA6Ly9wYWNrdGRlbW8uaW8iLCJhdWQiOiJodHRwOi8vcGFja3RkZW1vLmlvIn0.veDqoazwHctuqwA0m8CoBTE4THhbAPOIiUc0uGCF-0k",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"Food\",\n\t\"amount\":100\n}"
+						},
+						"description": "Data Protection and JWT combined"
+					},
+					"response": []
+				},
+				{
+					"name": "Validate JWT",
+					"request": {
+						"url": "http://localhost:51053/api/budgetcategory",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtaXRodW52cCIsImp0aSI6Ijc3NzcxZjZjLTU4NTItNDBhOC05OTA3LTBmNGQ0ODI1YzEyYSIsIlN1cGVyVXNlciI6IlRydWUiLCJleHAiOjE1MDIyNjg3MTQsImlzcyI6Imh0dHA6Ly9wYWNrdGRlbW8uaW8iLCJhdWQiOiJodHRwOi8vcGFja3RkZW1vLmlvIn0.veDqoazwHctuqwA0m8CoBTE4THhbAPOIiUc0uGCF-0k",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"mithunvp\",\n\t\"password\":\"abcd123\"\n}"
+						},
+						"description": "JWT in action"
+					},
+					"response": []
+				},
+				{
+					"name": "Cookie With Identity",
+					"request": {
+						"url": "http://localhost:58017/api/auth/login",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userName\":\"mithunvp\",\n\t\"password\":\"P@ssw0rd!123\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chapter 9",
+			"description": "Integration with database",
+			"item": [
+				{
+					"name": "WebAPI-AccessDatabase-EF6",
+					"request": {
+						"url": "http://localhost:64334/api/product/3",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "WebAPI-Dapper-POST",
+					"request": {
+						"url": "http://localhost:59505/api/department",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"Cafeteria\",\r\n\"groupName\": \"Housekeeping Department\"\r\n}"
+						},
+						"description": "Using Dapper to access database using POST method"
+					},
+					"response": []
+				},
+				{
+					"name": "WebAPI-Dapper-GET",
+					"request": {
+						"url": "http://localhost:59505/api/department",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"name\":\"Cafeteria\",\r\n\"groupName\": \"Housekeeping Department\"\r\n}"
+						},
+						"description": "Using Dapper to access database using GET method"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

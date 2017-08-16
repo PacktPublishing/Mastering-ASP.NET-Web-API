@@ -1,0 +1,12 @@
+{
+  "name": "demoapp1",
+  "author": "Mithun Pattankar",
+  "description": "a simple web app running using lite-server",
+  "license": "MIT",
+  "scripts": {    
+    "dev": "lite-server"
+  },
+  "dependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
