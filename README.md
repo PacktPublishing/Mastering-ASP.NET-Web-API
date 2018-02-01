@@ -7,7 +7,9 @@ consuming them in popular web UI frameworks.
 This book is written considering both experienced and new developers. A prior knowledge of developing web APIs will be an added advantage, but it’s not a prerequisite. It will help you build a truly cross-platform ASP.NET Core Web API and master it. We are using .NET Core 2.0 Preview 2 and ASP.NET Core 2.0 Preview 2, along with Visual Studio 2017 Preview 3 at the time of writing this book, and we do plan to update this book for the final release of ASP.NET Core 2.0.
 
 ## Instructions and Navigation
-The code for Chapter 05 is organized into one folder, Chapter05 and the rest in one separate folder. Chapter 01 and Chapter 02 does not have code.
+This is source code bundle for all chapters except for Chapter 1 and Chapter 2. Refer respective project README file and chapter contents to go along.
+
+To check out the source code in a chapter wise format please load/open "MasteringAspNetWebApiSln.sln" project file in the Visual Studio IDE.
 
 The code will look like the following:
 
