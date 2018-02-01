@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consuming Web API</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootbox.min.js"></script>
+    <script src="Scripts/JScallservice.js"></script>
+
+</head>
+<body class="container">
+    <div >
+        <h1>Consuming ASP.NET Core Web API using JavaScript</h1>       
+    </div>
+    <div class="container" id="divlogin" style="display:block;">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="uname" required>
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="psw" required>
+        <button onclick="doLogin()" class="btn btn-primary">Login</button>        
+    </div>    
+    <div id="contactsgrid" style="display:none;">
+        <button onclick="AddContacts()" class="btn btn-success">Add</button>
+        <div id="gridContent">            
+        </div>
+    </div>
+    <div id="contactform" style="display:none;">
+        <div>
+                <div class="form-group">
+                    <label for="usr">First Name:</label>
+                    <input type="text" class="form-control" id="firstName">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Last Name:</label>
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+                <div class="form-group">
+                    <label for="usr">Email:</label>
+                    <input type="email" class="form-control" id="emailid">
+                </div>
+                <button onclick="saveContact()" class="btn btn-primary">Save</button>        
+                <button onclick="doCancel()" class="btn btn-primary">Cancel</button>        
+            
+        </div>
+    </div>
+</body>
+
+</html>

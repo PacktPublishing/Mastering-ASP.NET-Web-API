@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mastering ASP.NET Core Web API</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Scripts//bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Mastering ASP.NET Core Web API</h1>
+        <h4>Consuming Web API using JavaScript or JQuery or ReactJS</h4>
+        <button onclick="gotoJsUI()" type="button" class="btn btn-primary">Using Javascript</button>
+        <button onclick="gotoJQueryUI()" type="button" class="btn btn-success">Using JQuery</button>
+        <button onclick="gotoReactUI()" type="button" class="btn btn-info">Using ReactJS</button>
+    </div>
+</body>
+
+</html>
+<script>
+    function gotoJsUI() {
+        window.location.assign("JavascriptUI.html");
+    }
+    function gotoJQueryUI() {
+        window.location.assign("JqueryUI.html");
+    }
+    function gotoReactUI() {
+        window.location.assign("reactUI.html");
+    }
+</script>

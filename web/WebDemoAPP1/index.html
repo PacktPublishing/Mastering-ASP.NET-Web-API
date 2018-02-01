@@ -1,0 +1,19 @@
+
+<html>
+    <head><title>Web Demo App1</title>
+    </head>
+<body>
+<h1>Web Demo App1</h1>
+<script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "http://localhost:51053/api/BudgetCategory/", true);
+    xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+            console.log(xmlhttp.responseText)
+        }
+    }
+    xmlhttp.send(null);
+</script>
+</body>
+
+</html>

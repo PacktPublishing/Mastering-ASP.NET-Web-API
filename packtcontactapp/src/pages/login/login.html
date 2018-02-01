@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Packt Contacts App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div>
+    <form novalidate (ngSubmit)="onSubmit(loginform)" [formGroup]="loginform">
+      <ion-list>
+        <ion-item>
+          <ion-label floating danger>Username</ion-label>
+          <ion-input formControlName="username" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating danger>Password</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <div padding>
+          <button ion-button color="secondary" type="submit" [disabled]="loginform.invalid">Login</button>
+        </div>
+      </ion-list>
+    </form>
+  </div>
+</ion-content>

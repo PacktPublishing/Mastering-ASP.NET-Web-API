@@ -1,0 +1,45 @@
+<div class="container">
+  <div>
+    <button type="button" class="btn btn-primary" (click)="createContact()">Create Contact</button>
+  </div>
+  <br>
+  <div id="contactlist" *ngIf="recordsExists">
+    <br>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of values">
+          <td>{{item.firstName}}</td>
+          <td>{{item.lastName}}</td>
+          <td><button type="button" (click)="editContact(item)" class="btn btn-primary btn-sm">Edit</button>
+            <button type="button" (click)="deleteContact(item)" class="btn btn-danger btn-sm">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="contactlistform" *ngIf="formAddEdit">
+    <form novalidate (ngSubmit)="onSubmit(contactForm)" [formGroup]="contactForm">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" formControlName="firstname">
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" formControlName="lastname">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" class="form-control" formControlName="email">
+      </div>
+      <button class="btn btn-success" type="submit" [disabled]="contactForm.invalid">Save</button>
+      <button class="btn btn-danger" type="button" (click)="cancelForm()">Cancel</button>
+    </form>
+  </div>
+</div>
